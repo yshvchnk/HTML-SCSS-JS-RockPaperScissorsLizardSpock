@@ -1,0 +1,65 @@
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 0.8;
+    margin: 0 0 20px;
+}
+.result {
+    &-layer {
+        margin: 80px auto 0 auto;
+        display: none;
+        grid-template-columns: repeat(3, auto);
+        width: 800px;
+        transition: all 0.5s ease-in-out;
+        &-1step {
+            width: 500px;
+            animation: show 1s ease-in-out forwards;
+        }
+        &-2step {
+            width: 500px;
+            animation: show 1s ease-in-out forwards;
+        }
+    }
+    &-3col {
+        grid-column: 3 / 4;
+    }
+    &-title {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    &-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-show {
+        display: flex;
+    }
+    &-placeholder {
+        width: 150px;
+        height: 150px;
+        background-color: $bg-from;
+        border-radius: 50%;
+    }
+    &-winner {
+        box-shadow: 0 0 0 40px rgba(59, 67, 99, 0.6),
+            0 0 0 80px rgba(59, 67, 99, 0.4), 0 0 0 120px rgba(59, 67, 99, 0.2);
+        z-index: -1;
+        animation: show 1s ease-in-out forwards;
+    }
+    &-loser {
+        animation: show 1s ease-in-out forwards;
+    }
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,25 @@
+main {
+    width: 375px;
+    height: 375px;
+    display: grid;
+    grid-template: repeat(3, 130px) / repeat(3, 130px);
+    justify-content: center;
+    align-content: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-wrap: wrap;
+    margin: 80px auto 0 auto;
+    position: relative;
+    &::after {
+        content: "";
+        background: url("../images/bg-pentagon.svg") no-repeat;
+        background-size: cover;
+        height: 70%;
+        width: 70%;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        z-index: -1;
+    }
+}

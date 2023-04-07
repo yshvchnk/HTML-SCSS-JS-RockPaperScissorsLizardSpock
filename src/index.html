@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./images/favicon-16x16.png"
+        />
+        <title>Rock, Paper, Scissors, Lizard, Spock</title>
+        <link rel="stylesheet" href="./css/main.min.css" />
+        <script defer src="./js/script.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="container">
+            <header>
+                <h1>
+                    <span>Rock</span>
+                    <span>Paper</span>
+                    <span>Scissors</span>
+                    <span>Lizard</span>
+                    <span>Spock</span>
+                </h1>
+                <div class="score-container">
+                    <h3 class="score-title">Score</h3>
+                    <p id="score">0</p>
+                </div>
+            </header>
+        </div>
+
+        <!-- Main Layer -->
+        <main id="main-layer">
+            <button
+                class="btn-circle btn-scissors btn-pick"
+                data-choice="scissors"
+            >
+                <span class="wrapper">
+                    <img src="./images/icon-scissors.svg" alt="scissors" />
+                </span>
+            </button>
+            <button class="btn-circle btn-spock btn-pick" data-choice="spock">
+                <span class="wrapper">
+                    <img src="./images/icon-spock.svg" alt="spock" />
+                </span>
+            </button>
+            <button class="btn-circle btn-paper btn-pick" data-choice="paper">
+                <span class="wrapper">
+                    <img src="./images/icon-paper.svg" alt="paper" />
+                </span>
+            </button>
+            <button class="btn-circle btn-lizard btn-pick" data-choice="lizard">
+                <span class="wrapper">
+                    <img src="./images/icon-lizard.svg" alt="lizard" />
+                </span>
+            </button>
+            <button class="btn-circle btn-rock btn-pick" data-choice="rock">
+                <span class="wrapper">
+                    <img src="./images/icon-rock.svg" alt="rock" />
+                </span>
+            </button>
+        </main>
+
+        <!-- Result Layer first frame-->
+        <div class="result-layer result-layer-1step" id="result-layer-1">
+            <div class="result-container">
+                <h3 class="result-title">You picked</h3>
+                <button
+                    class="btn-circle btn-paper"
+                    data-choice="paper"
+                    id="user-select"
+                >
+                    <span class="wrapper">
+                        <img src="./images/icon-paper.svg" alt="paper" />
+                    </span>
+                </button>
+            </div>
+            <div class="result-container result-3col">
+                <h3 class="result-title">The house picked</h3>
+                <div class="result-placeholder"></div>
+            </div>
+        </div>
+
+        <!-- Result Layer second frame-->
+        <div class="result-layer result-layer-2step" id="result-layer-2">
+            <div class="result-container">
+                <h3 class="result-title">You picked</h3>
+                <button
+                    class="btn-circle btn-paper"
+                    data-choice="paper"
+                    id="user-select"
+                >
+                    <span class="wrapper">
+                        <img src="./images/icon-paper.svg" alt="paper" />
+                    </span>
+                </button>
+            </div>
+            <div class="result-container result-3col">
+                <h3 class="result-title">The house picked</h3>
+                <button
+                    class="btn-circle btn-rock"
+                    data-choice="rock"
+                    id="computer-select"
+                >
+                    <span class="wrapper">
+                        <img src="./images/icon-rock.svg" alt="rock" />
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Result Layer third frame-->
+        <div class="result-layer result-layer-3step" id="result-layer">
+            <div class="result-container result-1item">
+                <h3 class="result-title">You picked</h3>
+                <button
+                    class="btn-circle btn-paper user-select-anim"
+                    data-choice="paper"
+                    id="user-select"
+                >
+                    <span class="wrapper">
+                        <img src="./images/icon-paper.svg" alt="paper" />
+                    </span>
+                </button>
+            </div>
+            <div class="result-container result-2item">
+                <h2>
+                    <span id="result">win</span>
+                </h2>
+                <button class="btn-reset" id="reset-game">Play again</button>
+            </div>
+            <div class="result-container result-3item">
+                <h3 class="result-title">The house picked</h3>
+                <button
+                    class="btn-circle btn-rock computer-select-anim"
+                    data-choice="rock"
+                    id="computer-select"
+                >
+                    <span class="wrapper">
+                        <img src="./images/icon-rock.svg" alt="rock" />
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Rules Layer -->
+        <div class="rules-layer" id="rules-layer">
+            <div class="rules-modal">
+                <img src="./images/image-rules-bonus.svg" alt="rules" />
+                <button class="close" id="close-modal">
+                    <img src="./images/icon-close.svg" alt="close" />
+                </button>
+            </div>
+        </div>
+
+        <!-- Rules Button -->
+        <button class="btn-rules" id="open-modal">Rules</button>
+
+        <!-- Preloader -->
+        <div class="preloader" id="preloader">
+            <img src="./images/preloader.svg" alt="loading" />
+        </div>
+    </body>
+</html>

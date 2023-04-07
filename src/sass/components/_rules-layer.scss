@@ -1,0 +1,37 @@
+.rules {
+    &-layer {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    &-modal {
+        margin: 10% auto 0 auto;
+        background-color: #fff;
+        width: 400px;
+        height: 450px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+        .close {
+            border: none;
+            background-color: transparent;
+            margin-top: 50px;
+            transform: scale(1.5);
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                transform: scale(1.7);
+            }
+        }
+    }
+}
